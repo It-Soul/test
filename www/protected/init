@@ -1,0 +1,9 @@
+<?php
+$dbFile = '../environments/database-local.php';
+if (file_exists($dbFile)) {
+    copy($dbFile, 'config/database.php');
+
+    echo 'Initialization completed';
+    return false;
+}
+echo "Something went wrong";
